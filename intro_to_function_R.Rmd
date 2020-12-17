@@ -1,0 +1,97 @@
+---
+title: "inro to function in R"
+author: "Abdel Samea Ahmed"
+date: "12/14/2020"
+output: html_document
+---
+
+Intro to function in R {.tabset}
+===================================================
+## __function definition__
+ function is a group of instructions that takes input and uses them to compute other values and return results.
+ **example:**
+ create function called oddcount to calculate the count of odd numbers in vector of integer
+ *solution*
+
+```{r setup, include=T}
+knitr::opts_chunk$set(echo = TRUE)
+# counts the Number of odd numbers
+oddcount <- function(x){
+  #assiegn k to 0
+  k <- 0
+  for(n in x)
+    if (n%%2==1){
+      k <- k+1
+    }
+    return(k)
+  
+  
+}
+# count the odd numbers in y <- c(1,2,3)
+
+y <- c(1,2,3,7,9)
+oddcount(y)
+
+```
+
+## __Function parts__
+
+An R function is created by using the keyword function. The basic syntax of an R function definition is as follows:
+function_name <- function(arg_1, arg_2, ...) {
+   Function body 
+}
+
+***
+Function Components
+The different parts of a function are −
+
+Function Name − This is the actual name of the function. It is stored in R environment as an object with this name.
+
+Arguments − An argument is a placeholder. When a function is invoked, you pass a value to the argument. Arguments are optional; that is, a function may contain no arguments. Also arguments can have default values.
+
+Function Body − The function body contains a collection of statements that defines what the function does.
+
+Return Value − The return value of a function is the last expression in the function body to be evaluated.
+
+R has many in-built functions which can be directly called in the program without defining them first. We can also create and use our own functions referred as user defined functions.
+
+*Simple Example:
+
+```{r}
+# create function take 2 arguments and 
+  #returns power of 
+powerof <- function(x,y){
+  result=x^y
+  return(result)
+}
+
+powerof(2,2)
+
+## we can set a default value for one of the 2 arguments
+powerof <- function(x, y = 4){
+  result = x^y
+  print(paste(x , "raised to 4 is =:" ,result ))
+}
+
+powerof(3)
+
+```
+
+
+
+## __Builtin Functions__
+
+Simple examples of in-built functions are seq(), mean(), max(), sum(x) and paste(...) etc. They are directly called by user written programs. You can refer most widely used R functions
+
+```{r echo=T}
+# Create a sequence of numbers from 32 to 44.
+print(seq(32,44))
+
+# Find mean of numbers from 25 to 82.
+print(mean(25:82))
+
+# Find sum of numbers frm 41 to 68.
+print(sum(41:68))
+
+```
+

@@ -1,0 +1,114 @@
+---
+title: "Art of R 1st chapter"
+Auther: "AbdelSamea"
+output: html_notebook
+---
+
+>This is a first file in art of R
+the book name is the art of R programming,
+the following vectors are atomic vectors, 
+they shows that the indexing in R starts from 1 not 0 ,
+the expression of x[2:3] is a subvector of x shows the elements 2,3.
+
+intro to R {.tabset}
+===========================================
+
+-------------------------------------------
+## intro to R
+***
+```{r}
+x <- c(1,2,3)
+q <- c(x,x,8)
+x[2:3]
+print(x)
+q
+q[[3]]
+
+
+```
+
+mean and sd of vector x or q can be easly by mean and sd
+```{r}
+mean(x)
+sd(x)
+mean(q)
+sd(q)
+```
+
+
+> require dataset of nile and show the mean and standerd d. of dataset and histogram
+and line plot
+
+*markcode*|*appeared*
+--------|--------|
+H~2~O   |*H2O*
+--------|--------|
+Fe^+2^  |*Fe+2*
+--------|--------|
+Fe^2+^  |*Fe2+*
+--------|--------|
+final   | _text_
+
+## histogram
+
+```{r}
+
+
+mean(Nile)
+sd(Nile)
+
+hist(Nile, border = 'red', col = 'gray')
+
+```
+
+```{r}
+plot(Nile, type = 's',col = 'red')
+```
+
+***
+
+
+## Syntax of Rmarkdow
+DT-dataTable
+
+```{r}
+
+library(DT)
+
+iris1 <- DT::datatable(iris)
+
+iris1
+```
+
+
+<span style="color: lightblue">*Created By ASA*</span>
+```{r}
+bookdown::gitbook:
+  config:
+    toc:
+      collapse: subsection
+      scroll_highlight: yes
+      before: null
+      after: null
+    toolbar:
+      position: fixed
+    edit : null
+    download: null
+    search: yes
+    fontsettings:
+      theme: white
+      family: sans
+      size: 2
+    sharing:
+      facebook: yes
+      github: no
+      twitter: yes
+      linkedin: no
+      weibo: no
+      instapaper: no
+      vk: no
+      all: ['facebook', 'twitter', 'linkedin', 'weibo', 'instapaper']
+    info: yes
+
+```
+
